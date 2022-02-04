@@ -10,6 +10,6 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 public class Email {
-    private String sender, reciever;
+    private String reciever;
     private String subject, body;
 }

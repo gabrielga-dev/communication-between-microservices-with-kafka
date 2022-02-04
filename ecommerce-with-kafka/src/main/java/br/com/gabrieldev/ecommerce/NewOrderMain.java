@@ -26,8 +26,7 @@ public class NewOrderMain {
 
                     var order = new Order(userId, orderId, amount);
                     var email = new Email(
-                        "sender@gmail.com",
-                        "reciever@gmai.com",
+                        "test@test.com",
                         "New Order!",
                         "Wellcome, " + userId + "! We're processing your order! Thanks for the preference!"
                     );

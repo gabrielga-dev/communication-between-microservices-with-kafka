@@ -9,3 +9,16 @@ kafka.parameters.group=groupId=${application-group.id}_${spring.profiles.active}
 kafka.parameters=${kafka.parameters.brokers}&${kafka.parameters.default}&${kafka.parameters.group}
 
 kafka.email.endpoint=kafka:ECOMMERCE_SEND_EMAIL?${kafka.parameters}
+
+# MAIL
+mail.host=smtp.gmail.com
+mail.port=587
+mail.username=
+mail.password=
+
+spring.mail.host=${mail.host}
+spring.mail.port=${mail.port}
+spring.mail.username=${mail.username}
+spring.mail.password=${mail.password}
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true

@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name="order")
+@Table(name="orders")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,10 +25,10 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "userId", nullable = false)
+    @Column(name = "user_id", nullable = false)
     private String userId;
 
-    @Column(name = "userEmailAddress", nullable = false)
+    @Column(name = "user_email_address", nullable = false)
     private String userEmailAddress;
 
     @Column(name = "amount", nullable = false)

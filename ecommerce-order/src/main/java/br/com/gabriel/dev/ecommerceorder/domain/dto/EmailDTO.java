@@ -10,5 +10,6 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 public class EmailDTO {
+    private String reciever;
     private String subject, body;
 }

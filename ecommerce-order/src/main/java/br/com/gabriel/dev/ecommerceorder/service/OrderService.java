@@ -5,6 +5,7 @@ import br.com.gabriel.dev.ecommerceorder.domain.dto.OrderDTO;
 import br.com.gabriel.dev.ecommerceorder.domain.mapper.OrderMapper;
 import br.com.gabriel.dev.ecommerceorder.repository.OrderRepository;
 import br.com.gabriel.dev.ecommerceorder.service.dispatcher.KafkaDispatcher;
+import br.com.gabriel.dev.ecommerceorder.util.constants.KafkaConstants;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,9 @@ public class OrderService {
     }
 
     private void sendMessages(OrderDTO orderDTO) {
+        var emailToBeSent = orderMapper.toEmail(orderDTO);
 
+        kafkaDispatcherOrder.send(KafkaConstants.TOPIC_NEW_ORDER, orderDTO.getUserId(), orderDTO);
+        kafkaDispatcherEmail.send(KafkaConstants.TOPIC_SEND_EMAIL, orderDTO.getUserId(), emailToBeSent);
     }
 }

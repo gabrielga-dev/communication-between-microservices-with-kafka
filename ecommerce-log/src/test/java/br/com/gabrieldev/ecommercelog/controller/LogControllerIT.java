@@ -49,7 +49,7 @@ public class LogControllerIT extends BaseIntegration {
     }
 
     @Test
-    void filterLogs_whenWhenCalled_noEcxceptionIsThrown() throws Exception {
+    void filterLogs_whenCalled_thenNoExceptionIsThrown() throws Exception {
         mockMvc.perform(get(URL).contentType(APPLICATION_JSON_UTF8)).andExpect(status().isOk());
     }
 }

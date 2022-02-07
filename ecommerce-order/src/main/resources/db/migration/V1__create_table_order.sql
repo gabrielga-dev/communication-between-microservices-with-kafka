@@ -1,0 +1,7 @@
+CREATE TABLE orders(
+     id BIGINT PRIMARY KEY AUTO_INCREMENT,
+     user_id VARCHAR(200) NOT NULL,
+     user_email_address VARCHAR(200) NOT NULL,
+     amount DECIMAL NOT NULL,
+     timestamp TIMESTAMP NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

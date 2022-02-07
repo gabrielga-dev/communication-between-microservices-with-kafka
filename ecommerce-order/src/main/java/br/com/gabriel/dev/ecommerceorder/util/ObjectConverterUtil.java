@@ -1,4 +1,4 @@
-package br.com.gabrieldev.ecommercelog.util;
+package br.com.gabriel.dev.ecommerceorder.util;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
 
 /**
- * This class can parse java objects into json Strings
+ * This class can parse java objects into json Strings on our tests
  *
  * @author Gabriel Guimarães de Almeida
  */

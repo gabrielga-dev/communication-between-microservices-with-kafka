@@ -8,7 +8,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.web.server.ResponseStatusException;
 
 @Slf4j
 @Component
@@ -26,7 +28,11 @@ public class EmailProcessor implements Processor {
                 objectMapper.readValue((String) exchange.getMessage().getBody(), Email.class)
             );
         } catch (JsonProcessingException e) {
-            e.printStackTrace();//todo throw error
+            throw new ResponseStatusException(
+                    HttpStatus.INTERNAL_SERVER_ERROR,
+                    "Can't parse the object into json",
+                    e
+            );
         }
     }
 }

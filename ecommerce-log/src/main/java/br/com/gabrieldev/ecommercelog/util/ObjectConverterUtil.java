@@ -14,8 +14,8 @@ import org.springframework.web.server.ResponseStatusException;
  *
  * @author Gabriel Guimarães de Almeida
  */
-@Component
 @Getter
+@Component
 public class ObjectConverterUtil {
 
     @Autowired
@@ -24,10 +24,10 @@ public class ObjectConverterUtil {
     public String toJson(Object value) {
         try {
             return objectMapper.writeValueAsString(value);
-        } catch (JsonProcessingException e) {
+        } catch (Exception e) {
             throw new ResponseStatusException(
                     HttpStatus.INTERNAL_SERVER_ERROR,
-                    "Can't parse the objecto into json",
+                    "Can't parse the object into json",
                     e
             );
         }

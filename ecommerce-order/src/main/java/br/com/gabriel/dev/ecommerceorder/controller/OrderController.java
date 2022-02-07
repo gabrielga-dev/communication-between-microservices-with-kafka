@@ -33,7 +33,7 @@ public class OrderController {
      * new order's data
      * */
     @PostMapping
-    public ResponseEntity<OrderDTO> filterLog(@RequestBody OrderDTO orderDTO){
+    public ResponseEntity<OrderDTO> saveNewOrder(@RequestBody OrderDTO orderDTO){
         return ResponseEntity.ok(orderService.saveAndDispatchMessages(orderDTO));
     }
 }

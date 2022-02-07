@@ -13,6 +13,7 @@ import java.nio.charset.StandardCharsets;
  * @author Gabriel Guimarães de Almeida
  */
 public class GsonSerializer<T> implements Serializer<T> {
+
     private final Gson gson = new GsonBuilder().create();
 
     /**

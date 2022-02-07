@@ -2,11 +2,18 @@ package br.com.gabrieldev.ecommerce.config.beans;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 import java.util.Properties;
 
+/**
+ * Configuration to generate a Bean of JavaMailSender to be used to send emails
+ *
+ * @author Gabriel Guimarães de Almeida
+ * */
+@Configuration
 public class MailerBean {
 
     @Value("${mail.username}")

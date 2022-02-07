@@ -21,6 +21,12 @@ public class ObjectConverterUtil {
     @Autowired
     private ObjectMapper objectMapper;
 
+    /**
+     * This method recieve a java object and parse it into a json string
+     *
+     * @param value {@link Object} java object to be parsed
+     * @return {@link String} string containing the json value
+     * */
     public String toJson(Object value) {
         try {
             return objectMapper.writeValueAsString(value);

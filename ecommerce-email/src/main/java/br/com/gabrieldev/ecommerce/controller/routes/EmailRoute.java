@@ -6,6 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+/**
+ * This class will process every email message that comes through kafka
+ *
+ * @author Gabriel Guimarães de Almeida
+ * */
 @Component
 public class EmailRoute extends RouteBuilder {
 

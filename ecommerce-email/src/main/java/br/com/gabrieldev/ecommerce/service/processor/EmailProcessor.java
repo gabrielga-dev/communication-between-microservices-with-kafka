@@ -12,6 +12,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
 
+/**
+ * This class holds the process method for every message from email topic
+ *
+ * @author Gabriel Guimarães de Almeida
+ * */
 @Slf4j
 @Component
 @RequiredArgsConstructor

@@ -13,8 +13,8 @@ kafka.email.endpoint=kafka:ECOMMERCE_SEND_EMAIL?${kafka.parameters}
 # MAIL
 mail.host=smtp.gmail.com
 mail.port=587
-mail.username=
-mail.password=
+mail.username=<PUT HERE YOUR EMAIL ADDRESS>
+mail.password=<PUT HERE YOUR EMAIL PASSWORD>
 
 spring.mail.host=${mail.host}
 spring.mail.port=${mail.port}

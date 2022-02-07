@@ -1,6 +1,7 @@
 package br.com.gabrieldev.ecommercelog.service;
 
 import br.com.gabrieldev.ecommercelog.domain.dto.LogDTO;
+import br.com.gabrieldev.ecommercelog.domain.entity.Log;
 import br.com.gabrieldev.ecommercelog.domain.mapper.LogMapper;
 import br.com.gabrieldev.ecommercelog.domain.type.LogType;
 import br.com.gabrieldev.ecommercelog.repository.LogRepository;
@@ -9,7 +10,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import br.com.gabrieldev.ecommercelog.domain.entity.Log;
 
 import java.time.LocalDateTime;
 
@@ -72,7 +72,7 @@ public class LogService {
     }
 
     private LogDTO buildSearchLog(Pageable pageable, String topic, LogType type, String initialDate, String finalDate) {
-        var toSave = new LogDTO(
+        return new LogDTO(
                 "",
                 String.format(
                         "Search by: topic: %s; type: %s; initial date: %s; final date: %s; pageable: %s",
@@ -81,6 +81,5 @@ public class LogService {
                 LogType.SEARCH,
                 LocalDateTime.now()
         );
-        return toSave;
     }
 }

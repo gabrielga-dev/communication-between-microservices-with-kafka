@@ -29,6 +29,7 @@ public class LogRoute extends RouteBuilder {
             .process(logProcessor);
 
         from(kafkaNewOrderTopicEndpoint)
-            .process(logProcessor);
+            .process(logProcessor)
+                .end();
     }
 }

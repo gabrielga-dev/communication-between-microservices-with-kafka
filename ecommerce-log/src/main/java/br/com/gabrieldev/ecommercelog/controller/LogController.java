@@ -4,7 +4,6 @@ import br.com.gabrieldev.ecommercelog.domain.dto.LogDTO;
 import br.com.gabrieldev.ecommercelog.domain.type.LogType;
 import br.com.gabrieldev.ecommercelog.service.LogService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.core.io.InputStreamResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -43,7 +42,7 @@ public class LogController {
      * @author Gabriel Guimarães de Almeida
      * */
     @GetMapping
-    public ResponseEntity<Page<LogDTO>> filterLog(
+    public ResponseEntity<Page<LogDTO>> filterLogs(
             @RequestParam(required = false) String topic, @RequestParam(required = false) LogType type,
             @RequestParam(required = false) String initialDate, @RequestParam(required = false) String finalDate,
             Pageable pageable

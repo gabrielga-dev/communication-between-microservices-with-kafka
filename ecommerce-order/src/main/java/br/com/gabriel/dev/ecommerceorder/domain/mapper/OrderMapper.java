@@ -8,9 +8,19 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
+/**
+ * This class has methods for mapping an {@link Order} ou an {@link OrderDTO} into another java class
+ *
+ * @author Gabriel Guimarães de Almeida
+ * */
 @Component
 public class OrderMapper {
 
+    /**
+     * This method map an {@link OrderDTO} object into a {@link Order}
+     * @param orderDTO {@link OrderDTO} java object that contains the data that is about to be saved on our database
+     * @return {@link Order} java object that is used to save information on our database
+     */
     public Order toDomain(OrderDTO orderDTO){
         return new Order(
                 null,
@@ -21,11 +31,17 @@ public class OrderMapper {
         );
     }
 
+    /**
+     * This method map an {@link OrderDTO} object into a {@link EmailDTO}
+     * @param orderDTO {@link OrderDTO} java object that contains the data that is needed for building the email
+     * structure
+     * @return {@link EmailDTO} java object that is used for sending kafka messages into email topic
+     */
     public EmailDTO toEmail(OrderDTO orderDTO) {
         return new EmailDTO(
                 orderDTO.getUserEmailAddress(),
                 EmailConstants.EMAIL_SUBJECT,
-                "Your order is being processed."
+                EmailConstants.EMAIL_DEFAULT_BODY
         );
     }
 }

@@ -5,6 +5,11 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Class that represents emails
+ *
+ * @author Gabriel Guimarães de Almeida
+ * */
 @Getter
 @Setter
 @ToString

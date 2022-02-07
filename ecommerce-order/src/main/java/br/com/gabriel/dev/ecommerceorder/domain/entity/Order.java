@@ -14,6 +14,11 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+/**
+ * This class represents the orders table on our database
+ *
+ * @author Gabriel Guimarães de Almeida
+ * */
 @Entity
 @Table(name="orders")
 @Getter

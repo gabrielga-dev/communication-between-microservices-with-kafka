@@ -8,6 +8,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * This configuration class creates the beans of kafka dispatchers for orders and emails
+ *
+ * @author Gabriel Guimarães de Almeida
+ * */
 @Slf4j
 @Configuration
 public class KafkaDispatcherBean {
@@ -17,17 +22,11 @@ public class KafkaDispatcherBean {
 
     @Bean
     public KafkaDispatcher<OrderDTO> getOrderKafkaDispatcher(){
-        return new KafkaDispatcher<>(
-                kafkaPort,
-                (x, y) -> log.info("Order message dispatched!")
-        );
+        return new KafkaDispatcher<>(kafkaPort);
     }
 
     @Bean
     public KafkaDispatcher<EmailDTO> getEmailKafkaDispatcher(){
-        return new KafkaDispatcher<>(
-                kafkaPort,
-                (x, y) -> log.info("Email message dispatched!")
-        );
+        return new KafkaDispatcher<>(kafkaPort);
     }
 }

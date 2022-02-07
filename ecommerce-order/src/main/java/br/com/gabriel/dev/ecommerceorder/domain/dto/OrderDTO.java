@@ -7,6 +7,11 @@ import lombok.ToString;
 
 import java.math.BigDecimal;
 
+/**
+ * Class that represents incomming orders
+ *
+ * @author Gabriel Guimarães de Almeida
+ * */
 @Getter
 @Setter
 @ToString

@@ -1,0 +1,7 @@
+[2022-02-01 17:05:47,478] INFO Creating topic ECOMMERCE_NEW_ORDER with configuration {} and initial partition assignment Map(0 -> ArrayBuffer(0)) (kafka.zk.AdminZkClient)
+[2022-02-01 17:05:47,671] INFO [Controller id=0, targetBrokerId=0] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2022-02-01 17:05:47,773] INFO [ReplicaFetcherManager on broker 0] Removed fetcher for partitions Set(ECOMMERCE_NEW_ORDER-0) (kafka.server.ReplicaFetcherManager)
+[2022-02-01 17:05:47,946] INFO [LogLoader partition=ECOMMERCE_NEW_ORDER-0, dir=/tmp/kafka-logs] Loading producer state till offset 0 with message format version 2 (kafka.log.UnifiedLog$)
+[2022-02-01 17:05:47,979] INFO Created log for partition ECOMMERCE_NEW_ORDER-0 in /tmp/kafka-logs/ECOMMERCE_NEW_ORDER-0 with properties {} (kafka.log.LogManager)
+[2022-02-01 17:05:47,983] INFO [Partition ECOMMERCE_NEW_ORDER-0 broker=0] No checkpointed highwatermark is found for partition ECOMMERCE_NEW_ORDER-0 (kafka.cluster.Partition)
+[2022-02-01 17:05:47,984] INFO [Partition ECOMMERCE_NEW_ORDER-0 broker=0] Log loaded for partition ECOMMERCE_NEW_ORDER-0 with initial high watermark 0 (kafka.cluster.Partition)
